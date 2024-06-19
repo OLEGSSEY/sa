@@ -1,0 +1,30 @@
+CREATE TABLE Roles (
+  RolesTD INT PRIMARY KEY, 
+  RoleName VARCHAR(99)
+);
+
+CREATE TABLE User (
+  UserID INT PRIMARY KEY,
+  Login VARCHAR(99) NOT NULL,
+  PasswordHas VARCHAR(99) NOT NULL,
+  RolesID INT
+);
+
+CREATE TABLE Levels (
+  LevelsID INT PRIMARY KEY,
+  LevelName VARCHAR(99)
+);
+
+CREATE TABLE Status (
+  StatusID INT PRIMARY KEY, 
+  StatusName VARCHAR(99)
+);
+
+CREATE TABLE environment (
+  environmentID INT PRIMARY KEY,
+  Location VARCHAR(99) NOT NULL,
+  LevelsID INT,
+  UserID INT,
+  StatusID,
+  Problem VARCHAR(99) NOT NULL
+);
